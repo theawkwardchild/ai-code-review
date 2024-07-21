@@ -19,5 +19,4 @@ I ran these commands to start the project
 python -m venv openai-env
 openai-env\Scripts\activate
 pip install --upgrade openai
-pip install bleach
 ```
