@@ -12,3 +12,12 @@ filename - review - date.html
 ```
 
 This file will show the provided code file with any security issues highlighted in red.
+
+## Installation
+I ran these commands to start the project
+```
+python -m venv openai-env
+openai-env\Scripts\activate
+pip install --upgrade openai
+pip install bleach
+```
