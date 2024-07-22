@@ -1,6 +1,14 @@
+# windows:
 # python -m venv openai-env
 # openai-env\Scripts\activate
 # pip install --upgrade openai
+
+# linux:
+# sudo apt install python3.10-venv # may or maynot be necessary for you
+# python3 -m venv env 
+# source env/bin/activate
+# pip install openai
+
 
 import argparse
 from openai import OpenAI
@@ -15,7 +23,8 @@ def main():
     parser.add_argument('-f', '--file', type=str, required=True, help='The file to process')
     
     args = parser.parse_args()
-    client = OpenAI(api_key="sk-proj-YOUR_API_KEY")
+    openai_key = open("openai_key", "r").read()
+    client = OpenAI(api_key=openai_key)
     if not exists(args.file):
         print("The provided file does not exist")
         exit()
